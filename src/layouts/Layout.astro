@@ -1,73 +1,88 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props as Props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<script>
-			import { webVitals } from "../lib/vitals";
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <!-- Google tag (gtag.js) -->
+    <script setup>
+      import { onMount } from "solid-js";
 
-			let analyticsId = import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID;
+      onMount(() => {
+        const gaPropertyId = import.meta.env.GOOGLE_ANALYTICS_ID;
 
-			if (analyticsId) {
-				webVitals({
-					path: location.pathname,
-					params: location.search,
-					analyticsId,
-				});
-			}
-		</script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
 
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet"> 
-	</head>
-	<body>
-		<slot />
-	</body>
+        gtag("js", new Date());
+        gtag("config", gaPropertyId);
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0B15WN553Q"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 <style>
-	:root {
-		--font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
-		--font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  :root {
+    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
+    --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
 
-		--color-text: hsl(12, 5%, 4%);
-		--color-bg: hsl(10, 21%, 95%);
-		--color-border: hsl(17, 24%, 90%);
-	}
+    --color-text: hsl(12, 5%, 4%);
+    --color-bg: hsl(10, 21%, 95%);
+    --color-border: hsl(17, 24%, 90%);
+  }
 
-	html {
-		font-family: 'Rowdies', sans-serif;
-		font-size: var(--font-size-base);
-		color: var(--color-text);
-		background-color: var(--color-bg);
-	}
+  html {
+    font-family: "Rowdies", sans-serif;
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
 
-	body {
-		margin: 0;
-	}
+  body {
+    margin: 0;
+  }
 
-	:global(h1) {
-		font-size: var(--font-size-xl);
-	}
+  :global(h1) {
+    font-size: var(--font-size-xl);
+  }
 
-	:global(h2) {
-		font-size: var(--font-size-lg);
-	}
+  :global(h2) {
+    font-size: var(--font-size-lg);
+  }
 
-	:global(code) {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace, Rowdies;
-	}
+  :global(code) {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace,
+      Rowdies;
+  }
 </style>
