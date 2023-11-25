@@ -16,7 +16,7 @@ const { title } = Astro.props as Props;
     <title>{title}</title>
     <!-- Google tag (gtag.js) -->
     <script setup>
-      import { onMount } from "solid-js";
+      const { onMount } = require("solid-js");
 
       onMount(() => {
         const gaPropertyId = import.meta.env.GOOGLE_ANALYTICS_ID;
@@ -30,7 +30,9 @@ const { title } = Astro.props as Props;
         gtag("config", gaPropertyId);
       });
     </script>
-    <script async src=`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.GOOGLE_ANALYTICS_ID}`
+    <script
+      async
+      src=`https://www.googletagmanager.com/gtag/js?id=${import.meta.env.GOOGLE_ANALYTICS_ID}`
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
