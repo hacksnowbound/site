@@ -49,6 +49,13 @@ export const prerender = true;
 						</p>
 					</div>
 					
+					<div class="column-left-buffer">
+						<br><br><br>
+						<br><br><br>
+						<br><br><br>
+						<br><br><br>
+					</div>
+					
 					<div class="grid-item">
 						<p class="grid-content">
 							<span style="font-size:max(2.4vw, 32px)">More Info</span> 
@@ -67,6 +74,13 @@ export const prerender = true;
 				
 				<div class="column-right">
 					
+					<div class="column-right-buffer">
+						<br><br><br>
+						<br><br><br>
+						<br><br><br>
+						<br><br><br>
+					</div>
+					
 					<div class="grid-item">
 						<p class="grid-content">
 							<span style="font-size:max(2.4vw, 32px)">Schedule</span> 
@@ -75,6 +89,10 @@ export const prerender = true;
 						</p>
 					</div>
 					
+					<div class="column-right-buffer">
+						<br><br><br>
+						<br><br><br>
+					</div>
 					
 					<div class="grid-item">
 						<p class="grid-content">
@@ -86,9 +104,16 @@ export const prerender = true;
 				</div>
 			</div>
 			<p>&nbsp;</p>
-			<p class="text-center" style="font-size:max(2.4vw, 24px)">
-				Questions? Reach out to <u><a href="mailto:hack@hacksnowbound.com">hack@hacksnowbound.com</a></u>!
-			</p>
+			
+			<div class="d-flex justify-content-center">
+				<!-- <button class="pushable" disabled="true" aria-disabled="true">
+					<a class="shadow"></a>
+					<a class="edge"></a>
+					<a class="front no-underline" href="https://airtable.com/appBosPXrgTp44E6X/pagPCjgNZwc0SXeq6/form" target="_blank" rel="noopener noreferrer">
+						Sign up!
+					</a>
+				</button> -->
+			</div>
 
 			<footer class="text-sm text-center italic mt-[5vh]">Snowbound is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499). Any donations made to Snowbound are tax deductible.</footer>
 		</main>
@@ -212,6 +237,7 @@ export const prerender = true;
 		background-color: #66ccff;
 		border-radius: 25px;
 		box-shadow: 0px 8px #00abff;
+		padding-bottom: 2px;
 	}
 
 	.grid-content {
@@ -234,6 +260,14 @@ export const prerender = true;
 	.hidark {
 		background-color: #338eda;
 	}
+	
+	.column-right-buffer {
+		display: none;
+	}
+	
+	.column-left-buffer {
+		display: none;
+	}
 
 	@media (min-width: 800px) {
 		.row {
@@ -249,6 +283,15 @@ export const prerender = true;
 			flex: 50%;
 			padding-left: 7.5px;
 		}
+		
+		.column-right-buffer {
+			display: block;
+		}
+		
+		.column-left-buffer {
+			display: block;
+		}
+		
 	}
 
 </style>
