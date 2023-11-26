@@ -7,8 +7,7 @@ export const prerender = true;
 ---
 
 <Layout title="Snowbound">
-	<script src="./snowf.js"></script>
-	<script>import snowf from 'snowf'; var snowflakes=snowf.init({}); window.onresize=function(){snowflakes.resize();};</script>
+	
 	<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 	<script src="https://cdn.tailwindcss.com" content="text/javascript"></script>
 
@@ -78,12 +77,24 @@ export const prerender = true;
 			<div class="md:flex md:justify-content-center">	
 				<div class="grid-item w-full md:w-[48vw] float-left">
 					<p class="grid-content">
+						<span style="font-size:max(2.4vw, 32px)">Sponsors</span>
+						<br>
+						Thank you so much to our sponsors! We couldn't have done this without you.
+						<!-- <img src="shirthappens"> -->
+						Interested in sponsoring? Let us know at <span class="highlight"><a class="text-inherit underline" href="mailto:sponsors@hacksnowbound.com">sponsors@hacksnowbound.com</a></span>.
+					</p>
+				</div>
+				<div class="w-0 h-0 md:w-[42vw] float-right"></div>
+			</div>
+			<div class="md:flex md:justify-content-center">	
+				<div class="w-0 h-0 md:w-[48vw] float-left"></div>
+				<div class="grid-item w-full md:w-[42vw] float-right">
+					<p class="grid-content">
 						<span style="font-size:max(2.4vw, 32px)">Contact</span>
 						<br>
 						Questions? Reach out to <span class="highlight"><a class="text-inherit underline" href="mailto:hack@hacksnowbound.com">hack@hacksnowbound.com</a></span>!
 					</p>
 				</div>
-				<div class="w-0 h-0 md:w-[42vw] float-right"></div>
 			</div>
 			<p>&nbsp;</p>
 			
@@ -99,7 +110,17 @@ export const prerender = true;
 
 			<footer class="text-sm text-center italic mt-[5vh]">Snowbound is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499). Any donations made to Snowbound are tax deductible.</footer>
 		</main>
+		<script>
+		import snowf from 'snowf'; 
+		var snowflakes=snowf.init({'amount':100}); 
+		window.onresize=function(){snowflakes.resize();}; 
+		var canv = document.getElementsByClassName("snowf-canvas")[0]
+		canv.style = "position: absolute; top: 0px; left: 0px;";
+		document.getElementsByClassName("bodyContainer")[0].appendChild(canv);
+		snowflakes.resize();
+		</script>
 	</div>
+	
 </Layout>
 
 <style>
