@@ -115,7 +115,7 @@ export const prerender = true;
 		var snowflakes=snowf.init({'amount':100}); 
 		window.onresize=function(){snowflakes.resize();}; 
 		var canv = document.getElementsByClassName("snowf-canvas")[0]
-		canv.style = "position: absolute; top: 0px; left: 0px;";
+		canv.style = "position: absolute; top: 0px; left: 0px; pointer-events: none;";
 		document.getElementsByClassName("bodyContainer")[0].appendChild(canv);
 		snowflakes.resize();
 		</script>
