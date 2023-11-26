@@ -1,1 +1,1 @@
-![snowbound](src/assets/snowbound.svg "Snowbound!❄️")
+<https://www.hacksnowbound.com>
