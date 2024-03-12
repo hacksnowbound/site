@@ -9,28 +9,22 @@ export const prerender = true;
 <Layout title="Snowbound">
 	<script src="https://cdn.tailwindcss.com" content="text/javascript"></script>
 
-	<div class="titleContainer flex justify-center" style="background-color: #338eda">
+	<div class="titleContainer flex justify-center" style="position: relative;">
 		<img id="a" class="lg:max-w-[80vw] max-w-[100%] pt-[1vw]" src="/banner.svg">
+		<div class="curve" style="position: absolute; bottom: -25%; left: 10%"></div>
+		<div class="curve" style="position: absolute; left: -25%; bottom: -25%"></div>
+		<div class="curve" style="position: absolute; left: 50%; bottom: -25%"></div>
 	</div>
-	<div class="bodyContainer" style="background-color: #338eda">
-		<main>
-			<div class="d-flex justify-content-center">
-				<!-- <button class="pushable" disabled="true" aria-disabled="true">
-					<a class="shadow"></a>
-					<a class="edge"></a>
-					<a class="front no-underline" href="https://airtable.com/appBosPXrgTp44E6X/pagPCjgNZwc0SXeq6/form" target="_blank" rel="noopener noreferrer">
-						Sign up!
-					</a>
-				</button> -->
-			</div>
-
-			<br><br><br>
-			<div class="md:grid card-container">
-				<div class="about grid-item">
-					<p class="grid-content">
-						<span style="font-size:max(2.4vw, 32px)">About</span>
-						<br>
-						Snowbound is a <span class="highlight">hackathon</span>: a social coding event where <span class="hidark">high school and middle schoolers</span> come together to explore their passions, develop team-building skills, and bring their innovative ideas to life.
+	<div class="bodyContainer" style="margin: 10px;">
+		<!-- <div class="registrationContainer infoBox">
+			<a href="/register" class="register">Register!</a>
+		</div>-->
+		<div class="infoContainer">
+			<div class="aboutContainer infoBox">
+				<h1>About</h1>
+				<p>
+					<br>
+						Snowbound is a <span class="highlight"><a class="text-inherit" href="https://en.wikipedia.org/wiki/Hackathon">hackathon</a></span>: a social coding event where <span class="hidark">high school and middle schoolers</span> come together to explore their passions, develop team-building skills, and bring their innovative ideas to life.
 						<br>
 						<br>
 						Coders of all skill levels are welcome, and we'll host various <span class="hidark">coding workshops</span> throughout the day.
@@ -40,90 +34,167 @@ export const prerender = true;
 						<br>
 						<br>
 						Join us in embracing the winter spirit and <span class="hidark">build something awesome!</span>
-					</p>
-				</div>
-				<div class="schedule grid-item">
-					<p class="grid-content">
-						<span style="font-size:max(2.4vw, 32px)">Schedule</span>
-						<br>
-						01001100 01101111 01110010 01100101 01101101 00100000 01101001 01110000 01110011 01110101 01101101 00100000 01100100 01101111 01101100 01101111 01110010 00100000 01110011 01101001 01110100 00100000 01100001 01101101 01100101 01110100 00101100 00100000 01100011 01101111 01101110 01110011 01100101 01100011 01110100 01100101 01110100 01110101 01110010 00100000 01100001 01100100 01101001 01110000 01101001 01110011 01100011 01101001 01101110 01100111 00100000 01001100 01101111 01110010 01100101 01101101 00100000 01101001 01110000 01110011 01110101 01101101 00100000 01100100 01101111 01101100 01101111 01110010 00100000 01110011 01101001 01110100 00100000 01100001 01101101 01100101 01110100 00101100 00100000 01100011 01101111 01101110 01110011 01100101 01100011 01110100 01100101 01110100 01110101 01110010 00100000 01100001 01100100 01101001 01110000 01101001 01110011 01100011 01101001 01101110 01100111 00100000
-					</p>
-				</div>
-				<div class="sponsors grid-item">
-					<p class="grid-content">
-						<span style="font-size:max(2.4vw, 32px)">Sponsors</span>
-						<br>
-					</p>
-					<div class="flex justify-center items-center">	
-						<a href="https://shirthappensvt.com/"><img class="w-[45vh] inline-block" src="https://images.squarespace-cdn.com/content/v1/63da8d11c8e6024288a682c4/ab998f60-84b1-436b-9b45-8c10c0901033/Shirt+Happens+Logo+Suite+-+B%26W-09.png" alt="Shirt Happens Logo"></a>
-						<a href="https://hackclub.com/"><img class="w-[35vh] inline-block" src="https://assets.hackclub.com/flag-standalone-wtransparent.svg" alt="Hack Club Logo"></a>
-					</div>
-					<p class="grid-content">
-						<br>
-						<span>Thank you so much to our sponsors! We couldn't do this without you. Interested in sponsoring? Let us know at <span class="highlight"><a class="text-inherit underline" href="mailto:sponsors@hacksnowbound.com">sponsors@hacksnowbound.com</a></span>.</span>
-					</p>
-				</div>
-				<div class="info grid-item">
-					<p class="grid-content">
-						<span style="font-size:max(2.4vw, 32px)">More Info</span>
-						<br>
-						<b>Time:</b> 12:00pm - 40:00pm
-						<br>
-						<b>Location:</b> Somewhere, Vermont
-						<br>
-						<b>What to bring:</b> Any kind of laptop, including a school laptop! (If you don't have a laptop, email us at <span class="highlight"><a class="text-inherit underline" href="mailto:jasper@hacksnowbound.com">jasper@hacksnowbound.com</a></span>.)
-						<br>
+				</p>
+			</div>
 
-						<b>Cost:</b> Absolutely free! We will provide 01100011 01101001 01101110 01100111 0010000
-					</p>
-				</div>
-				<div class="contact grid-item">
-					<p class="grid-content">
-						<span style="font-size:max(2.4vw, 32px)">Contact</span>
-						<br>
-						Questions? Reach out to <span class="highlight"><a class="text-inherit underline" href="mailto:hack@hacksnowbound.com">hack@hacksnowbound.com</a></span>!
-					</p>
-				</div>
+			<div class="scheduleContainer infoBox">
+				<h1>Schedule</h1>
+				<br>
+				<ul>
+					<li class="scheduleEvent">
+						<div class="scheduleEventTime">9:00</div>
+						<div class="scheduleEventDescription">Event 1</div>
+					</li>
+					<li class="scheduleEvent">
+						<div class="scheduleEventTime">10:30</div>
+						<div class="scheduleEventDescription">Event 2</div>
+					</li>
+					<li class="scheduleEvent">
+						<div class="scheduleEventTime">12:30</div>
+						<div class="scheduleEventDescription">Event 3</div>
+					</li>
+					<li class="scheduleEvent">
+						<div class="scheduleEventTime">1:30</div>
+						<div class="scheduleEventDescription">Event 4</div>
+					</li>
+					<li class="scheduleEvent">
+						<div class="scheduleEventTime">3:00</div>
+						<div class="scheduleEventDescription">Event 5</div>
+					</li>
+					<li class="scheduleEvent">
+						<div class="scheduleEventTime">6:00</div>
+						<div class="scheduleEventDescription">Event 6</div>
+					</li>
+					<li class="scheduleEvent">
+						<div class="scheduleEventTime">7:00</div>
+						<div class="scheduleEventDescription">Event 7</div>
+					</li>
+					<li class="scheduleEvent">
+						<div class="scheduleEventTime">9:00</div>
+						<div class="scheduleEventDescription">Event 8</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="moreInfoContainer infoBox">
+				<h1>More Info</h1>
+				<br>
+				<b>Time:</b> 3:00pm March 22nd - 3:00pm March 23rd
+				<br>
+				<b>Location:</b> Shelburne, Vermont
+				<br>
+				<b>What to bring:</b> Any kind of laptop, including a school laptop! (If you don't have a laptop, email us at <span class="highlight"><a class="text-inherit" href="mailto:jasper@hacksnowbound.com">jasper@hacksnowbound.com</a></span>.)
+				<br>
+				<b>Cost:</b> Absolutely free! We will provide food and any other supplies necessary.
+				<br>
+				<br>
+				More questions? Reach out to <span class="highlight"><a class="text-inherit" href="mailto:core@hacksnowbound.com">core@hacksnowbound.com</a></span>!		
+				<br>	
+			
 			</div>
 			
-			<div class="d-flex justify-content-center">
-				<!-- <button class="pushable" disabled="true" aria-disabled="true">
-					<a class="shadow"></a>
-					<a class="edge"></a>
-					<a class="front no-underline" href="https://airtable.com/appBosPXrgTp44E6X/pagPCjgNZwc0SXeq6/form" target="_blank" rel="noopener noreferrer">
-						Sign up!
-					</a>
-				</button> -->
-			</div>
-
-			<footer class="text-sm text-center italic mt-[5vh]">Snowbound is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499). Any donations made to Snowbound are tax deductible.</footer>
-		</main>
-		<script>
+		</div>		
+	</div>
+	<script>
 		import snowf from 'snowf'; 
-		var snowflakes=snowf.init({'amount':100}); 
+		var snowflakes=snowf.init({'amount':100});
 		window.onresize=function(){snowflakes.resize();}; 
-		var canv = document.getElementsByClassName("snowf-canvas")[0]
-		canv.style = "position: absolute; top: 0px; left: 0px; pointer-events: none;";
+		var canv = document.getElementsByClassName("snowf-canvas")[0];
+		canv.setAttribute('style', "position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 0;");
 		document.getElementsByClassName("bodyContainer")[0].appendChild(canv);
 		snowflakes.resize();
-		</script>
-	</div>
-	
+	</script>
+	<footer class="">
+		<div class="sponsorfooter" class="">
+			<a href="https://shirthappensvt.com/"><img class="w-[15vh] inline-block sponsorImage" src="https://images.squarespace-cdn.com/content/v1/63da8d11c8e6024288a682c4/ab998f60-84b1-436b-9b45-8c10c0901033/Shirt+Happens+Logo+Suite+-+B%26W-09.png" alt="Shirt Happens Logo"></a>
+			<a href="https://hackclub.com/"><img class="w-[20vh] inline-block sponsorImage" src="https://assets.hackclub.com/flag-standalone-wtransparent.svg" alt="Hack Club Logo"></a>
+		</div>
+		<div class="text-sm text-center italic mt-[1.5vh]">Snowbound is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499). Any donations made to Snowbound are tax deductible. 
+			Interested in sponsoring? Email us at <a class="highlight text-inherit" href="mailto:sponsor@hacksnowbound.com">sponsor@hacksnowbound.com</a></div>
+	</footer>			
 </Layout>
 
 <style>
+	.curve {
+		position: absolute;
+		height: 250px;
+		width: 100%;
+		bottom: 0;
+		text-align: center;
+	}
+
+	.curve::before {
+		content: '';
+		display: block;
+		border-radius: 100% 50%;
+		width: 55%;
+		height: 100%;
+		background-color: hsl(0, 0%, 100%);
+		z-index: 0;
+	}
+	.infoBox{
+		background-color: var(--color-bg);
+		box-shadow: 0px 6px #00689c;
+		border: none;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 30px;
+		width: 80%;
+		min-width: min-content;
+		margin: 20px 0px;
+		cursor: pointer;
+		border-radius: 12px;
+		padding: 15px 20px;
+		transition: all 0.3s ease 0s;
+		z-index: 1;
+	}
+	.infoBox:hover{
+		box-shadow: 0px 10px #00689c;
+		position: relative;
+		transform: translateY(-4px);
+	}
+	.infoContainer{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		padding: 20px;
+	}
 	:root {
 		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
 	}
 
+	.listContainer{
+		display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+	}
+
 	.titleContainer {
 		padding-top: 10vh;
+		padding-bottom: 10vh;
+		background-color: var(--color-bg);
+	}
+	.sponsorfooter{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		padding-top: 50px;
+	}
+
+	footer{
+		background-color: var(--color-bg);
 	}
 
 	body {
 		font-family: 'Rowdies', sans-serif;
 		--bs-body-font-size: 30px;
 		color: white;
+		background-color: white;
 	}
 
 	main {
@@ -132,16 +203,21 @@ export const prerender = true;
 		max-width: 150ch;
 	}
 
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 0%;
+	@keyframes hover {
+		0% {
+			transform: translateY(0);
 		}
 		50% {
-			background-position-y: 80%;
+			transform: translateY(-5px);
+		}
+		100% {
+			transform: translateY(0);
 		}
 	}
-
+	.schedule-text {
+		font-size: 25px;
+		font-weight: normal;
+	}
 	.pushable {
 		position: relative;
 		border: none;
@@ -218,17 +294,67 @@ export const prerender = true;
 		outline: none;
 	}
 
-	.grid-item {
-		width: min(50%, 400px)*2;
-		/* width: 500px; */
-		font-size: max(1.2vw, 16px);
-		margin: 1.5vw;
-		margin-top: 30px;
-
+	.info-box {
+		margin-top: 20px;
 		background-color: #66ccff;
 		border-radius: 25px;
 		box-shadow: 0px 8px #00abff;
-		padding: .5vw;
+		max-width: max-content;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		/* center items */
+		align-items: center;
+		/*text-align: center;*/
+	}
+
+
+	ul{
+		list-style-type: none;
+		padding: 0;
+		align-items: center;
+		text-align: center;
+		max-width: 100%;
+		flex: auto;
+	}
+
+	ul>.scheduleEvent{
+		margin-top: 10px;
+		background: var(--color-list-item);
+		border-radius: 10px;
+		max-width: 90%;
+		font-size: 25px;
+		margin: auto;
+		margin-top: 10px;
+		text-align: left;
+		box-shadow: 0px 6px #00689c;
+		display: flex;
+	}
+	.scheduleEventTime{
+		font-weight: normal;
+		font-size: 25px;
+		height: auto;
+		padding: 8px;
+		background: linear-gradient(0deg,  rgb(102 204 255) 0%, rgb(127, 212, 255) 100%); /*rgb(102 204 255);*/
+
+		position: relative;
+		left: 0px;
+		width: 80px;
+		border-radius: 10px 0px 0px 10px;
+		margin-right: 10px;
+	}
+	.scheduleEventDescription{
+		font-weight: normal;
+		font-style: italic;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+	}
+	ul>li:hover{
+		animation: shake 5s infinite;
 	}
 
 	.grid-content {
@@ -249,27 +375,20 @@ export const prerender = true;
 	}
 
 	.hidark {
-		background-color: #338eda;
+		background-color: #1266aa;
 	}
 	
 
-
-
-
-	.card-container {
-		/* display: grid;  */
-		grid-template-columns: 1fr 1fr; 
-		grid-template-rows: 0fr 0fr 0fr; 
-		gap: 0px 0px; 
-		grid-template-areas: 
-			"schedule about"
-			"sponsors sponsors"
-			"info contact";
+	/* for phone */
+	@media screen and (max-width: 600px){
+		.infoBox{
+			font-size: 20px;
+			width: 100%;
+			margin-left: 0px;
+			margin-right: 0px;
+		}
 	}
-	.schedule { grid-area: schedule; }
-	.about { grid-area: about; }
-	.sponsors { grid-area: sponsors; }
-	.info { grid-area: info; }
-	.contact { grid-area: contact; }
+
+
 
 </style>
