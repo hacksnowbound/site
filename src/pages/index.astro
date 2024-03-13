@@ -10,7 +10,7 @@ export const prerender = true;
 	<script src="https://cdn.tailwindcss.com" content="text/javascript"></script>
 
 	<div class="titleContainer flex justify-center" style="position: relative;">
-		<img id="a" class="lg:max-w-[80vw] max-w-[100%] pt-[1vw]" src="/banner.svg">
+		<img id="a" class="lg:max-w-[80vw] max-w-[100%] pt-[1vw]" src="/banner.svg" style="margin-bottom: 100px;">
 		<div class="curve" style="position: absolute; bottom: -25%; left: 10%"></div>
 		<div class="curve" style="position: absolute; left: -25%; bottom: -25%"></div>
 		<div class="curve" style="position: absolute; left: 50%; bottom: -25%"></div>
@@ -36,7 +36,21 @@ export const prerender = true;
 						Join us in embracing the winter spirit and <span class="hidark">build something awesome!</span>
 				</p>
 			</div>
-
+			<div class="moreInfoContainer infoBox">
+				<h1>More Info</h1>
+				<br>
+				<b>Time:</b> 3:00pm March 22nd - 3:00pm March 23rd
+				<br>
+				<b>Location:</b> Shelburne, Vermont
+				<br>
+				<b>What to bring:</b> Any kind of laptop, including a school laptop! (If you don't have a laptop, email us at <span class="highlight"><a class="text-inherit" href="mailto:jasper@hacksnowbound.com">jasper@hacksnowbound.com</a></span>.)
+				<br>
+				<b>Cost:</b> Absolutely free! We will provide food and any other supplies necessary.
+				<br>
+				<br>
+				More questions? Reach out to <span class="highlight"><a class="text-inherit" href="mailto:core@hacksnowbound.com">core@hacksnowbound.com</a></span>!		
+				<br>	
+			</div>
 			<div class="scheduleContainer infoBox">
 				<h1>Schedule</h1>
 				<br>
@@ -76,22 +90,17 @@ export const prerender = true;
 				</ul>
 			</div>
 
-			<div class="moreInfoContainer infoBox">
-				<h1>More Info</h1>
+
+			<div class="teamContainer infoBox">
+				<h1>Team</h1>
 				<br>
-				<b>Time:</b> 3:00pm March 22nd - 3:00pm March 23rd
-				<br>
-				<b>Location:</b> Shelburne, Vermont
-				<br>
-				<b>What to bring:</b> Any kind of laptop, including a school laptop! (If you don't have a laptop, email us at <span class="highlight"><a class="text-inherit" href="mailto:jasper@hacksnowbound.com">jasper@hacksnowbound.com</a></span>.)
-				<br>
-				<b>Cost:</b> Absolutely free! We will provide food and any other supplies necessary.
-				<br>
-				<br>
-				More questions? Reach out to <span class="highlight"><a class="text-inherit" href="mailto:core@hacksnowbound.com">core@hacksnowbound.com</a></span>!		
-				<br>	
-			
+				This section needs to be written.<br>
+				This section needs to be written.<br>
+				This section needs to be written.<br>
+				This section needs to be written.<br>
+				This section needs to be written.<br>	
 			</div>
+
 			<div class="sponsorContainer infoBox">
 				<h1>Sponsors</h1>
 				<br>
@@ -118,9 +127,15 @@ export const prerender = true;
 </Layout>
 
 <style>
+	html{
+		--info-box-color: #2aa7e5;
+		--color-bg: #3bb2ed;
+		--footer-text-color: #00689c;
+		--main-body-color: rgb(214, 246, 255);
+	}
 	.curve {
 		position: absolute;
-		height: 250px;
+		height: 50%;
 		width: 100%;
 		bottom: 0;
 		text-align: center;
@@ -132,11 +147,11 @@ export const prerender = true;
 		border-radius: 100% 50%;
 		width: 55%;
 		height: 100%;
-		background-color: hsl(0, 0%, 100%);
+		background-color: var(--main-body-color);
 		z-index: 0;
 	}
 	.infoBox{
-		background-color: var(--color-bg);
+		background-color: var(--info-box-color);
 		box-shadow: 0px 6px #00689c;
 		border: none;
 		color: white;
@@ -190,15 +205,15 @@ export const prerender = true;
 	}
 
 	footer{
-		background-color: white;
-		color: var(--color-bg);
+		background-color: var(--main-body-color);
+		color: var(--footer-text-color);
 	}
 
 	body {
 		font-family: 'Rowdies', sans-serif;
 		--bs-body-font-size: 30px;
 		color: white;
-		background-color: white;
+		background-color: var(--main-body-color);
 	}
 
 	main {
