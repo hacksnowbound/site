@@ -1,13 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 export const prerender = true;
 ---
 
 <Layout title="Snowbound">
-	<script src="https://cdn.tailwindcss.com" content="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 
 	<div class="titleContainer flex justify-center" style="position: relative;">
 		<img id="a" class="lg:max-w-[80vw] max-w-[100%] pt-[1vw]" src="/banner.svg" style="margin-bottom: 100px;">
@@ -215,12 +215,16 @@ export const prerender = true;
 		color: white;
 		background-color: var(--main-body-color);
 	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 150ch;
-	}
+  
+  @keyframes pulse {
+    0%,
+    100% {
+      background-position-y: 0%;
+    }
+    50% {
+      background-position-y: 80%;
+    }
+  }
 
 	@keyframes hover {
 		0% {
@@ -374,24 +378,108 @@ export const prerender = true;
 	}
 	ul>li:hover{
 		animation: shake 5s infinite;
-	}
+      
+  .pushable {
+    position: relative;
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+  }
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: hsl(0deg 0% 0% / 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+  .edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: #00abff;
+  }
+  .front {
+    display: block;
+    position: relative;
+    padding: 12px 42px;
+    border-radius: 12px;
+    color: white;
+    background: #66ccff;
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
+  }
+  .pushable:hover {
+    filter: brightness(110%);
+  }
+  .pushable:hover .front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  .pushable:active .front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+  }
+  .pushable:hover .shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
+  }
+  .pushable:active .shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+  }
+  .pushable:focus:not(:focus-visible) {
+    outline: none;
+  }
+  .grid-item {
+    width: min(50%, 400px) * 2;
+    /* width: 500px; */
+    font-size: max(1.2vw, 16px);
+    margin: auto;
+    margin-top: 30px;
 
-	.grid-content {
-		margin: 15px;
-	}
+    background-color: #66ccff;
+    border-radius: 25px;
+    box-shadow: 0px 8px #00abff;
+    padding-bottom: 2px;
+  }
 
-	.highlight, .hidark {
-		border-radius: 8px;
-		padding-left: 5px;
-  		padding-right: 5px;
-	}
+  .grid-content {
+    margin: 15px;
+  }
 
-	.highlight {
-		background-image: var(--astro-gradient);
-		animation: pulse 3s ease-in-out infinite;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-	}
+  .highlight,
+  .hidark {
+    border-radius: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .highlight {
+    background-image: var(--astro-gradient);
+    animation: pulse 3s ease-in-out infinite;
+    background-size: 100% 200%;
+    background-position-y: 100%;
+  }
+
+  .hidark {
+    background-color: #338eda;
+  }
+
+  .column-right-buffer {
+    display: none;
+  }
 
 	.hidark {
 		background-color: #1266aa;
@@ -407,7 +495,31 @@ export const prerender = true;
 			margin-right: 0px;
 		}
 	}
+  .column-left-buffer {
+    display: none;
+  }
 
+  @media (min-width: 800px) {
+    .row {
+      display: flex;
+    }
+        
+    .column-left {
+      flex: 50%;
+      padding-right: 7.5px;
+    }
 
+    .column-right {
+      flex: 50%;
+      padding-left: 7.5px;
+    }
 
+    .column-right-buffer {
+      display: block;
+    }
+
+    .column-left-buffer {
+      display: block;
+    }
+  }
 </style>

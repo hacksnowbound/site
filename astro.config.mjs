@@ -10,7 +10,7 @@ export default defineConfig({
   output: 'server',
   experimental: {
     assets: true
-   },
+  },
   adapter: vercel({
     imageService: true,
   }),
