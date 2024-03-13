@@ -92,7 +92,15 @@ export const prerender = true;
 				<br>	
 			
 			</div>
-			
+			<div class="sponsorContainer infoBox">
+				<h1>Sponsors</h1>
+				<br>
+				<a href="https://shirthappensvt.com/"><img class="w-[35vh] inline-block sponsorImage" src="https://images.squarespace-cdn.com/content/v1/63da8d11c8e6024288a682c4/ab998f60-84b1-436b-9b45-8c10c0901033/Shirt+Happens+Logo+Suite+-+B%26W-09.png" alt="Shirt Happens Logo"></a>
+				<a href="https://hackclub.com/"><img class="w-[40vh] inline-block sponsorImage" src="https://assets.hackclub.com/flag-standalone-wtransparent.svg" alt="Hack Club Logo"></a>
+				<br>
+				<br>
+				Interested in sponsoring? Email us at <a class="highlight text-inherit" href="mailto:sponsor@hacksnowbound.com">sponsor@hacksnowbound.com</a>
+			</div>
 		</div>		
 	</div>
 	<script>
@@ -100,17 +108,12 @@ export const prerender = true;
 		var snowflakes=snowf.init({'amount':100});
 		window.onresize=function(){snowflakes.resize();}; 
 		var canv = document.getElementsByClassName("snowf-canvas")[0];
-		canv.setAttribute('style', "position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 0;");
+		canv.setAttribute('style', "position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 100;");
 		document.getElementsByClassName("bodyContainer")[0].appendChild(canv);
 		snowflakes.resize();
 	</script>
 	<footer class="">
-		<div class="sponsorfooter" class="">
-			<a href="https://shirthappensvt.com/"><img class="w-[15vh] inline-block sponsorImage" src="https://images.squarespace-cdn.com/content/v1/63da8d11c8e6024288a682c4/ab998f60-84b1-436b-9b45-8c10c0901033/Shirt+Happens+Logo+Suite+-+B%26W-09.png" alt="Shirt Happens Logo"></a>
-			<a href="https://hackclub.com/"><img class="w-[20vh] inline-block sponsorImage" src="https://assets.hackclub.com/flag-standalone-wtransparent.svg" alt="Hack Club Logo"></a>
-		</div>
-		<div class="text-sm text-center italic mt-[1.5vh]">Snowbound is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499). Any donations made to Snowbound are tax deductible. 
-			Interested in sponsoring? Email us at <a class="highlight text-inherit" href="mailto:sponsor@hacksnowbound.com">sponsor@hacksnowbound.com</a></div>
+		<div class="text-sm text-center italic mt-[1.5vh]">Snowbound is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499). Any donations made to Snowbound are tax deductible. </div>
 	</footer>			
 </Layout>
 
@@ -187,7 +190,8 @@ export const prerender = true;
 	}
 
 	footer{
-		background-color: var(--color-bg);
+		background-color: white;
+		color: var(--color-bg);
 	}
 
 	body {
