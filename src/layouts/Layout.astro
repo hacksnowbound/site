@@ -18,7 +18,7 @@ const { title } = Astro.props as Props;
     <title>{title}</title>
     <meta
       name="description"
-      content="Snowbound is a Vermont Hackathon (social coding event) in Shelburne, happening March 22-23 2024. Snowbound will be completely free. Sign up today!"
+      content="Snowbound is a Vermont Hackathon (social coding event), happening in December 2023. Snowbound will be completely free. Sign up today!"
     />
     <meta
       name="keywords"
@@ -28,23 +28,14 @@ const { title } = Astro.props as Props;
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.hacksnowbound.com/" />
     <meta property="og:title" content="Snowbound - A Hackathon in Vermont" />
-    <meta
-      property="og:description"
-      content="Snowbound is a Vermont Hackathon (social coding event), happening in March 2024. Snowbound will be completely free. Sign up today!"
-    />
+    <meta property="og:description" content="Snowbound is a Vermont Hackathon (social coding event), happening in December 2023. Snowbound will be completely free. Sign up today!" />
     <meta property="og:image" content="/hsbthumb.png" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://www.hacksnowbound.com/" />
-    <meta
-      property="twitter:title"
-      content="Snowbound - A Hackathon in Vermont"
-    />
-    <meta
-      property="twitter:description"
-      content="Snowbound is a Vermont Hackathon (social coding event), happening in March 2024. Snowbound will be completely free. Sign up today!"
-    />
+    <meta property="twitter:title" content="Snowbound - A Hackathon in Vermont" />
+    <meta property="twitter:description" content="Snowbound is a Vermont Hackathon (social coding event), happening in December 2023. Snowbound will be completely free. Sign up today!" />
     <meta property="twitter:image" content="/hsbthumb.png" />
 
     <script
@@ -64,12 +55,13 @@ const { title } = Astro.props as Props;
 </html>
 <style>
   :root {
-    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    --font-size-base: clamp(0rem, 0.34vw + 0.91rem, 1.19rem);
     --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
     --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
 
     --color-text: hsl(12, 5%, 4%);
-    --color-bg: hsl(10, 21%, 95%);
+    --color-bg: #338eda;
+    --color-list-item: linear-gradient(0deg, #459fe9 0%, #5bb5ff 100%);
     --color-border: hsl(17, 24%, 90%);
   }
 
