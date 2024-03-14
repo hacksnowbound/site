@@ -1,16 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Image } from "astro:assets";
+import { Image } from 'astro:assets';
 
 export const prerender = true;
 ---
 
 <Layout title="Snowbound">
-  <script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://cdn.tailwindcss.com" content="text/javascript"></script>
 
 	<div class="titleContainer flex justify-center" style="position: relative;">
-		<img id="a" class="lg:max-w-[80vw] max-w-[100%] pt-[1vw]" src="/banner.svg">
+		<img id="a" class="lg:max-w-[80vw] max-w-[100%] pt-[1vw]" src="/HackSnowboundBannerUpdated.svg" style="margin-bottom: 100px;">
 		<div class="curve" style="position: absolute; bottom: -25%; left: 10%"></div>
 		<div class="curve" style="position: absolute; left: -25%; bottom: -25%"></div>
 		<div class="curve" style="position: absolute; left: 50%; bottom: -25%"></div>
@@ -36,7 +36,21 @@ export const prerender = true;
 						Join us in embracing the winter spirit and <span class="hidark">build something awesome!</span>
 				</p>
 			</div>
-
+			<div class="moreInfoContainer infoBox">
+				<h1>More Info</h1>
+				<br>
+				<b>Time:</b> 3:00pm March 22nd - 3:00pm March 23rd
+				<br>
+				<b>Location:</b> Shelburne, Vermont
+				<br>
+				<b>What to bring:</b> Any kind of laptop, including a school laptop! (If you don't have a laptop, email us at <span class="highlight"><a class="text-inherit" href="mailto:jasper@hacksnowbound.com">jasper@hacksnowbound.com</a></span>.)
+				<br>
+				<b>Cost:</b> Absolutely free! We will provide food and any other supplies necessary.
+				<br>
+				<br>
+				More questions? Reach out to <span class="highlight"><a class="text-inherit" href="mailto:core@hacksnowbound.com">core@hacksnowbound.com</a></span>!		
+				<br>	
+			</div>
 			<div class="scheduleContainer infoBox">
 				<h1>Schedule</h1>
 				<br>
@@ -76,22 +90,16 @@ export const prerender = true;
 				</ul>
 			</div>
 
-			<div class="moreInfoContainer infoBox">
-				<h1>More Info</h1>
-				<br>
-				<b>Time:</b> 3:00pm March 22nd - 3:00pm March 23rd
-				<br>
-				<b>Location:</b> Shelburne, Vermont
-				<br>
-				<b>What to bring:</b> Any kind of laptop, including a school laptop! (If you don't have a laptop, email us at <span class="highlight"><a class="text-inherit" href="mailto:jasper@hacksnowbound.com">jasper@hacksnowbound.com</a></span>.)
-				<br>
-				<b>Cost:</b> Absolutely free! We will provide food and any other supplies necessary.
-				<br>
-				<br>
-				More questions? Reach out to <span class="highlight"><a class="text-inherit" href="mailto:core@hacksnowbound.com">core@hacksnowbound.com</a></span>!
-				<br>
 
+			<div class="teamContainer infoBox">
+				<h1>Team</h1>
+				<br>
+				This section needs to be written.<br>
+				This section needs to be written.<br>
+				This section needs to be written.<br>
+				This section needs to be written.<br>	
 			</div>
+
 			<div class="sponsorContainer infoBox">
 				<h1>Sponsors</h1>
 				<br>
@@ -101,12 +109,12 @@ export const prerender = true;
 				<br>
 				Interested in sponsoring? Email us at <a class="highlight text-inherit" href="mailto:sponsor@hacksnowbound.com">sponsor@hacksnowbound.com</a>
 			</div>
-		</div>
+		</div>		
 	</div>
 	<script>
-		import snowf from 'snowf';
+		import snowf from 'snowf'; 
 		var snowflakes=snowf.init({'amount':100});
-		window.onresize=function(){snowflakes.resize();};
+		window.onresize=function(){snowflakes.resize();}; 
 		var canv = document.getElementsByClassName("snowf-canvas")[0];
 		canv.setAttribute('style', "position: absolute; top: 0px; left: 0px; pointer-events: none; z-index: 100;");
 		document.getElementsByClassName("bodyContainer")[0].appendChild(canv);
@@ -114,13 +122,19 @@ export const prerender = true;
 	</script>
 	<footer class="">
 		<div class="text-sm text-center italic mt-[1.5vh]">Snowbound is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club), a 501(c)(3) nonprofit (EIN: 81-2908499). Any donations made to Snowbound are tax deductible. </div>
-	</footer>
+	</footer>			
 </Layout>
 
 <style>
+	html{
+		--info-box-color: #2aa7e5;
+		--color-bg: #3bb2ed;
+		--footer-text-color: #00689c;
+		--main-body-color: rgb(214, 246, 255);
+	}
 	.curve {
 		position: absolute;
-		height: 250px;
+		height: 50%;
 		width: 100%;
 		bottom: 0;
 		text-align: center;
@@ -132,11 +146,11 @@ export const prerender = true;
 		border-radius: 100% 50%;
 		width: 55%;
 		height: 100%;
-		background-color: hsl(0, 0%, 100%);
+		background-color: var(--main-body-color);
 		z-index: 0;
 	}
 	.infoBox{
-		background-color: var(--color-bg);
+		background-color: var(--info-box-color);
 		box-shadow: 0px 6px #00689c;
 		border: none;
 		color: white;
@@ -170,169 +184,229 @@ export const prerender = true;
 		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
 	}
 
-  body {
-    font-family: "Rowdies", sans-serif;
-    --bs-body-font-size: 30px;
-    color: white;
-  }
+	.listContainer{
+		display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+	}
 
-  main {
-    margin: auto;
-    padding: 1em;
-    max-width: 150ch;
-  }
+	.titleContainer {
+		padding-top: 10vh;
+		padding-bottom: 10vh;
+		background-color: var(--color-bg);
+	}
+	.sponsorfooter{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		padding-top: 50px;
+	}
 
-<<<<<<< HEAD
-  @keyframes pulse {
-    0%,
-    100% {
-      background-position-y: 0%;
-    }
-    50% {
-      background-position-y: 80%;
-    }
-  }
-
-  .pushable {
-    position: relative;
-    border: none;
-    background: transparent;
-    padding: 0;
-    cursor: pointer;
-    outline-offset: 4px;
-    transition: filter 250ms;
-  }
-  .shadow {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    background: hsl(0deg 0% 0% / 0.25);
-    will-change: transform;
-    transform: translateY(2px);
-    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
-  }
-  .edge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    background: #00abff;
-  }
-  .front {
-    display: block;
-    position: relative;
-    padding: 12px 42px;
-    border-radius: 12px;
-    color: white;
-    background: #66ccff;
-    will-change: transform;
-    transform: translateY(-4px);
-    transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
-  }
-  .pushable:hover {
-    filter: brightness(110%);
-  }
-  .pushable:hover .front {
-    transform: translateY(-6px);
-    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-  }
-  .pushable:active .front {
-    transform: translateY(-2px);
-    transition: transform 34ms;
-  }
-  .pushable:hover .shadow {
-    transform: translateY(4px);
-    transition: transform 250ms cubic-bezier(0.3, 0.7, 0.4, 1.5);
-  }
-  .pushable:active .shadow {
-    transform: translateY(1px);
-    transition: transform 34ms;
-  }
-  .pushable:focus:not(:focus-visible) {
-    outline: none;
-  }
-  .grid-item {
-    width: min(50%, 400px) * 2;
-    /* width: 500px; */
-    font-size: max(1.2vw, 16px);
-    margin: auto;
-    margin-top: 30px;
-=======
 	footer{
-		background-color: white;
-		color: var(--color-bg);
+		background-color: var(--main-body-color);
+		color: var(--footer-text-color);
 	}
 
 	body {
 		font-family: 'Rowdies', sans-serif;
 		--bs-body-font-size: 30px;
 		color: white;
-		background-color: white;
+		background-color: var(--main-body-color);
 	}
->>>>>>> parent of 24db2dd (Added team section and changed some colors)
 
-    background-color: #66ccff;
-    border-radius: 25px;
-    box-shadow: 0px 8px #00abff;
-    padding-bottom: 2px;
-  }
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 150ch;
+	}
 
-  .grid-content {
-    margin: 15px;
-  }
+	@keyframes hover {
+		0% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-5px);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+	.schedule-text {
+		font-size: 25px;
+		font-weight: normal;
+	}
+	.pushable {
+		position: relative;
+		border: none;
+		background: transparent;
+		padding: 0;
+		cursor: pointer;
+		outline-offset: 4px;
+		transition: filter 250ms;
+  	}
+  	.shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 12px;
+		background: hsl(0deg 0% 0% / 0.25);
+		will-change: transform;
+		transform: translateY(2px);
+		transition:
+			transform
+			600ms
+			cubic-bezier(.3, .7, .4, 1);
+  	}
+  	.edge {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 12px;
+		background: #00abff;
+  	}
+  	.front {
+    	display: block;
+		position: relative;
+		padding: 12px 42px;
+		border-radius: 12px;
+		color: white;
+		background: #66ccff;
+		will-change: transform;
+		transform: translateY(-4px);
+		transition:
+			transform
+			600ms
+			cubic-bezier(.3, .7, .4, 1);
+	}
+	.pushable:hover {
+		filter: brightness(110%);
+	}
+	.pushable:hover .front {
+		transform: translateY(-6px);
+		transition:
+			transform
+			250ms
+			cubic-bezier(.3, .7, .4, 1.5);
+	}
+	.pushable:active .front {
+		transform: translateY(-2px);
+		transition: transform 34ms;
+	}
+	.pushable:hover .shadow {
+		transform: translateY(4px);
+		transition:
+			transform
+			250ms
+			cubic-bezier(.3, .7, .4, 1.5);
+	}
+	.pushable:active .shadow {
+		transform: translateY(1px);
+		transition: transform 34ms;
+	}
+	.pushable:focus:not(:focus-visible) {
+		outline: none;
+	}
 
-  .highlight,
-  .hidark {
-    border-radius: 8px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
+	.info-box {
+		margin-top: 20px;
+		background-color: #66ccff;
+		border-radius: 25px;
+		box-shadow: 0px 8px #00abff;
+		max-width: max-content;
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		flex-direction: column;
+		padding: 20px;
+		/* center items */
+		align-items: center;
+		/*text-align: center;*/
+	}
 
-  .highlight {
-    background-image: var(--astro-gradient);
-    animation: pulse 3s ease-in-out infinite;
-    background-size: 100% 200%;
-    background-position-y: 100%;
-  }
 
-  .hidark {
-    background-color: #338eda;
-  }
+	ul{
+		list-style-type: none;
+		padding: 0;
+		align-items: center;
+		text-align: center;
+		max-width: 100%;
+		flex: auto;
+	}
 
-  .column-right-buffer {
-    display: none;
-  }
+	ul>.scheduleEvent{
+		margin-top: 10px;
+		background: var(--color-list-item);
+		border-radius: 10px;
+		max-width: 90%;
+		font-size: 25px;
+		margin: auto;
+		margin-top: 10px;
+		text-align: left;
+		box-shadow: 0px 6px #00689c;
+		display: flex;
+	}
+	.scheduleEventTime{
+		font-weight: normal;
+		font-size: 25px;
+		height: auto;
+		padding: 8px;
+		background: linear-gradient(0deg,  rgb(102 204 255) 0%, rgb(127, 212, 255) 100%); /*rgb(102 204 255);*/
 
-  .column-left-buffer {
-    display: none;
-  }
+		position: relative;
+		left: 0px;
+		width: 80px;
+		border-radius: 10px 0px 0px 10px;
+		margin-right: 10px;
+	}
+	.scheduleEventDescription{
+		font-weight: normal;
+		font-style: italic;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+	}
+	ul>li:hover{
+		animation: shake 5s infinite;
+	}
 
-  @media (min-width: 800px) {
-    .row {
-      display: flex;
-    }
+	.grid-content {
+		margin: 15px;
+	}
 
-    .column-left {
-      flex: 50%;
-      padding-right: 7.5px;
-    }
+	.highlight, .hidark {
+		border-radius: 8px;
+		padding-left: 5px;
+  		padding-right: 5px;
+	}
 
-    .column-right {
-      flex: 50%;
-      padding-left: 7.5px;
-    }
+	.highlight {
+		background-image: var(--astro-gradient);
+		animation: pulse 3s ease-in-out infinite;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+	}
 
-    .column-right-buffer {
-      display: block;
-    }
+	.hidark {
+		background-color: #1266aa;
+	}
+	
 
-    .column-left-buffer {
-      display: block;
-    }
-  }
+	/* for phone */
+	@media screen and (max-width: 600px){
+		.infoBox{
+			font-size: 20px;
+			width: 100%;
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+	}
+
+
+
 </style>
