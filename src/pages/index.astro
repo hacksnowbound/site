@@ -24,10 +24,9 @@ export const prerender = true;
     </div>
   </div>
   <div class="bodyContainer" style="margin: 10px;">
-    <div class="infoContainer">
-	SNOWBOUND HAS NOW CONCLUDED. Please feel free to direct any questions to jasper@hackclub.com.
-</div>
+<p>SNOWBOUND HAS NOW CONCLUDED. Please feel free to direct any questions to jasper@hackclub.com.</p>
   </div>
+<div>
   <script>
     import snowf from "snowf";
     var snowflakes = snowf.init({ amount: 100 });
@@ -42,13 +41,6 @@ export const prerender = true;
     document.getElementsByClassName("bodyContainer")[0].appendChild(canv);
     snowflakes.resize();
   </script>
-  <footer class="">
-    <div class="text-sm text-center italic mt-[1.5vh]">
-      Snowbound is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club),
-      a 501(c)(3) nonprofit (EIN: 81-2908499). Any donations made to Snowbound
-      are tax deductible.
-    </div>
-  </footer>
 </Layout>
 
 <style>
